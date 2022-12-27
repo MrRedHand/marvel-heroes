@@ -1,0 +1,20 @@
+.card {
+  max-width: 330px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 10px 10px 0 0 #191826;
+  height: 600px;
+  background-color: #403d58;
+
+  &-avatar {
+    height: 300px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &-description {
+    padding: 20px;
+  }
+}
