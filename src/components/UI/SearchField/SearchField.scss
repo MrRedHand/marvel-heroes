@@ -1,0 +1,12 @@
+.search {
+  display: block;
+  margin: 50px 0 40px;
+  background: #171522;
+  padding: 15px;
+  border-radius: 6px;
+  width: 900px;
+
+  &::placeholder {
+    color: #3d3a54;
+  }
+}
