@@ -1,17 +1,24 @@
-import avatar from '../../images/spider.png';
 import './Card.scss';
+import React, { FC } from 'react';
 
-export const Card = () => {
+interface ICard {
+  avatarUrl: string;
+  title: string;
+  text: string;
+}
+
+export const Card: FC<ICard> = ({ avatarUrl, title, text }) => {
+  const goTo = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+  };
+
   return (
-    <div className='card'>
-      <div className='card-avatar'>
-        <img src={avatar} />
-      </div>
+    <a className='card' onClick={e => goTo(e)}>
+      <div className='card-avatar'>{avatarUrl && <img src={avatarUrl} />}</div>
       <div className='card-description'>
-        Spider-Man is one of the most popular and commercially successful superheroes. He has
-        appeared in countless forms of media, including several animated TV series, a live-action
-        television series, syndicated newspaper comic strips, and multiple series of films.
+        {title && <div className='card-title'>{title}</div>}
+        {text && <p>{text}</p>}
       </div>
-    </div>
+    </a>
   );
 };

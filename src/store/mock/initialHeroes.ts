@@ -3,42 +3,56 @@ import wolverineUrl from '../../images/wolverine.png';
 import captainUrl from '../../images/capatain.png';
 import hulkUrl from '../../images/hulk.png';
 import thorUrl from '../../images/thor.png';
+import ironUrl from '../../images/ironman.png';
 
 interface IinitialHeroes {
   img: string;
   name: string;
   text: string;
+  detailText: string;
 }
 
 export const initialHeroes: IinitialHeroes[] = [
   {
     img: spiderUrl,
     name: 'Spider-Man',
-    text: 'Spider-Man is one of the most popular and commercially successful superheroes. He has appeared in countless forms of media, including several animated TV series, a live-action television series, syndicated newspaper comic strips, and multiple series of films.'
+    text: 'Spider-Man is one of the most popular and commercially successful superheroes.',
+    detailText:
+      'The character was first portrayed in live-action by Danny Seagren in Spidey Super Stories, a The Electric Company skit which ran from 1974 to 1977.[11] In films, Spider-Man has been portrayed by actors Tobey Maguire, Andrew Garfield,[12] and in the Marvel Cinematic Universe by Tom Holland. He was voiced by Chris Pine and Jake Johnson in the animated film Spider-Man: Into the Spider-Verse (2018), with Johnson reprising the role in its sequel Spider-Man: Across the Spider-Verse (2023). Reeve Carney starred originally as Spider-Man in the 2010 Broadway musical Spider-Man: Turn Off the Dark.[13] Spider-Man has been well-received as a superhero and comic book character, and he is often ranked as one of the most popular and iconic comic book characters of all time and one of the most popular characters in all fiction.'
   },
   {
     img: wolverineUrl,
     name: 'Wolverine',
-    text: 'asdsad'
+    text: 'Spider-Man is one of the most popular and commercially successful superheroes.',
+    detailText:
+      'The character was first portrayed in live-action by Danny Seagren in Spidey Super Stories, a The Electric Company skit which ran from 1974 to 1977.[11] In films, Spider-Man has been portrayed by actors Tobey Maguire, Andrew Garfield,[12] and in the Marvel Cinematic Universe by Tom Holland. He was voiced by Chris Pine and Jake Johnson in the animated film Spider-Man: Into the Spider-Verse (2018), with Johnson reprising the role in its sequel Spider-Man: Across the Spider-Verse (2023). Reeve Carney starred originally as Spider-Man in the 2010 Broadway musical Spider-Man: Turn Off the Dark.[13] Spider-Man has been well-received as a superhero and comic book character, and he is often ranked as one of the most popular and iconic comic book characters of all time and one of the most popular characters in all fiction.'
   },
   {
     img: hulkUrl,
     name: 'Hulk',
-    text: 'asdadadadasasd'
+    text: 'Spider-Man is one of the most popular and commercially successful superheroes.',
+    detailText:
+      'The character was first portrayed in live-action by Danny Seagren in Spidey Super Stories, a The Electric Company skit which ran from 1974 to 1977.[11] In films, Spider-Man has been portrayed by actors Tobey Maguire, Andrew Garfield,[12] and in the Marvel Cinematic Universe by Tom Holland. He was voiced by Chris Pine and Jake Johnson in the animated film Spider-Man: Into the Spider-Verse (2018), with Johnson reprising the role in its sequel Spider-Man: Across the Spider-Verse (2023). Reeve Carney starred originally as Spider-Man in the 2010 Broadway musical Spider-Man: Turn Off the Dark.[13] Spider-Man has been well-received as a superhero and comic book character, and he is often ranked as one of the most popular and iconic comic book characters of all time and one of the most popular characters in all fiction.'
   },
   {
     img: thorUrl,
     name: 'Thor',
-    text: 'asdadadadasasd'
+    text: 'Spider-Man is one of the most popular and commercially successful superheroes.',
+    detailText:
+      'The character was first portrayed in live-action by Danny Seagren in Spidey Super Stories, a The Electric Company skit which ran from 1974 to 1977.[11] In films, Spider-Man has been portrayed by actors Tobey Maguire, Andrew Garfield,[12] and in the Marvel Cinematic Universe by Tom Holland. He was voiced by Chris Pine and Jake Johnson in the animated film Spider-Man: Into the Spider-Verse (2018), with Johnson reprising the role in its sequel Spider-Man: Across the Spider-Verse (2023). Reeve Carney starred originally as Spider-Man in the 2010 Broadway musical Spider-Man: Turn Off the Dark.[13] Spider-Man has been well-received as a superhero and comic book character, and he is often ranked as one of the most popular and iconic comic book characters of all time and one of the most popular characters in all fiction.'
   },
   {
-    img: 'gdfgdfg',
+    img: ironUrl,
     name: 'Iron man',
-    text: 'asdadadadasasd'
+    text: 'Spider-Man is one of the most popular and commercially successful superheroes.',
+    detailText:
+      'The character was first portrayed in live-action by Danny Seagren in Spidey Super Stories, a The Electric Company skit which ran from 1974 to 1977.[11] In films, Spider-Man has been portrayed by actors Tobey Maguire, Andrew Garfield,[12] and in the Marvel Cinematic Universe by Tom Holland. He was voiced by Chris Pine and Jake Johnson in the animated film Spider-Man: Into the Spider-Verse (2018), with Johnson reprising the role in its sequel Spider-Man: Across the Spider-Verse (2023). Reeve Carney starred originally as Spider-Man in the 2010 Broadway musical Spider-Man: Turn Off the Dark.[13] Spider-Man has been well-received as a superhero and comic book character, and he is often ranked as one of the most popular and iconic comic book characters of all time and one of the most popular characters in all fiction.'
   },
   {
     img: captainUrl,
     name: 'Captain America',
-    text: 'asdadadadasasd'
+    text: 'Spider-Man is one of the most popular and commercially successful superheroes.',
+    detailText:
+      'The character was first portrayed in live-action by Danny Seagren in Spidey Super Stories, a The Electric Company skit which ran from 1974 to 1977.[11] In films, Spider-Man has been portrayed by actors Tobey Maguire, Andrew Garfield,[12] and in the Marvel Cinematic Universe by Tom Holland. He was voiced by Chris Pine and Jake Johnson in the animated film Spider-Man: Into the Spider-Verse (2018), with Johnson reprising the role in its sequel Spider-Man: Across the Spider-Verse (2023). Reeve Carney starred originally as Spider-Man in the 2010 Broadway musical Spider-Man: Turn Off the Dark.[13] Spider-Man has been well-received as a superhero and comic book character, and he is often ranked as one of the most popular and iconic comic book characters of all time and one of the most popular characters in all fiction.'
   }
 ];
