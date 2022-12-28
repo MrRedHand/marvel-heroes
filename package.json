@@ -1,6 +1,6 @@
 {
   "name": "marvel-heroes",
-  "homepage": "./",
+  "homepage": "https://mrredhand.github.io/marvel-heroes/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
