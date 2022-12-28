@@ -1,3 +1,5 @@
+@import "src/css/variables";
+
 .search {
   display: block;
   margin: 50px 0 40px;
@@ -5,6 +7,11 @@
   padding: 15px;
   border-radius: 6px;
   width: 900px;
+
+  @media (max-width: $maxWidth) {
+    width: 100%;
+    margin: 35px 0 10px;
+  }
 
   &::placeholder {
     color: #3d3a54;

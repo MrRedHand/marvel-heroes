@@ -22,7 +22,7 @@ export const MainPage = () => {
           return <Card avatarUrl={hero.img} title={hero.name} text={hero.text} key={uuidv4()} />;
         })}
       </CardsWrap>
-      <Button value='Add hero' type='add' onClick={goToAddHeroPage} />
+      <Button value='Add hero' styleType='add' onClick={goToAddHeroPage} />
     </>
   );
 };
