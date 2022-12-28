@@ -60,7 +60,6 @@ export const AddHeroPage = () => {
 
   useEffect(() => {
     if (newHero !== null) {
-      console.log('ДИСП');
       dispatch(addNewHero(newHero));
     }
   }, [newHero]);
@@ -70,30 +69,7 @@ export const AddHeroPage = () => {
       setLocalStorageData(localStorageStringName, store.allHeroes);
       navigate('/');
     }
-    console.log('firstStoreState', firstStoreState);
-    console.log('store.allHeroes', store.allHeroes);
   }, [store]);
-
-  // export const resetPassword = (hero: IHero): TAppThunk => {
-  //   return function (dispatch: Dispatch) {
-  //     fetch(apiUrl + 'password-reset/reset', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify(data)
-  //     })
-  //       .then(checkResponse)
-  //       .then(data => {
-  //         console.log('resetPassword data', data);
-  //         dispatch(userResetPasswordSuccess());
-  //       })
-  //       .catch(error => {
-  //         dispatch(userResetPasswordFailed());
-  //         console.log('resetPassword error', error);
-  //       });
-  //   };
-  // };
 
   useEffect(() => {
     if (
