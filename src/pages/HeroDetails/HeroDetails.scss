@@ -1,0 +1,31 @@
+.hero-details {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .hero-avatar {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .hero-title {
+    font-size: 33px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+
+  .hero-details {
+    max-width: 500px;
+    line-height: 24px;
+  }
+
+  .hero-details-back {
+    margin-top: 40px;
+  }
+}
+
+

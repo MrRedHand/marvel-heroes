@@ -35,12 +35,24 @@ export const MainPage = () => {
         {searchValue.length > 0
           ? store.filteredHeroes.map(hero => {
               return (
-                <Card avatarUrl={hero.img} title={hero.name} text={hero.text} key={uuidv4()} />
+                <Card
+                  avatarUrl={hero.img}
+                  title={hero.name}
+                  text={hero.text}
+                  key={uuidv4()}
+                  id={hero.id}
+                />
               );
             })
           : store.allHeroes.map(hero => {
               return (
-                <Card avatarUrl={hero.img} title={hero.name} text={hero.text} key={uuidv4()} />
+                <Card
+                  avatarUrl={hero.img}
+                  title={hero.name}
+                  text={hero.text}
+                  key={uuidv4()}
+                  id={hero.id}
+                />
               );
             })}
       </CardsWrap>

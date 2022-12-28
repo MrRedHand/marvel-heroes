@@ -54,9 +54,11 @@
       @media (max-width: $maxWidth) {
         position: absolute;
         width: 100%;
+        height: auto;
         max-block-size: fit-content;
         left: 0;
-        top: 0
+        top: 0;
+        transform: revert;
       }
     }
   }

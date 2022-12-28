@@ -7,14 +7,22 @@ interface IButton {
   type?: 'button' | 'submit';
   onClick?: () => void;
   disabled?: boolean;
+  className?: string;
 }
 
 type TButtonTypes = 'add' | 'save' | 'cancel' | 'link';
 
-export const Button: FC<IButton> = ({ value, styleType, onClick, type, disabled = false }) => {
+export const Button: FC<IButton> = ({
+  value,
+  styleType,
+  onClick,
+  type,
+  disabled = false,
+  className
+}) => {
   return (
     <button
-      className={`button ${styleType}`}
+      className={`button ${styleType} ${className}`}
       onClick={onClick}
       type={type || 'button'}
       disabled={disabled}

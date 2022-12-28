@@ -9,17 +9,23 @@ import { addNewHero } from '../../store/actions/action-creators';
 import { useNavigate } from 'react-router';
 import { setLocalStorageData } from '../../services/localStorage';
 import { localStorageStringName } from '../../services/constants';
+import { IHero } from '../../utils/types';
+import { TAppThunk } from '../../store/utils/types';
+import { Dispatch } from 'redux';
 
 export const AddHeroPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const store = useSelector(state => state.main);
 
+  let firstStoreState: IHero[];
+
   const [heroName, setHeroName] = useState<string>('');
   const [heroImgUrl, setHeroImgUrl] = useState<string>('');
   const [heroIntro, setHeroIntro] = useState<string>('');
   const [heroDetail, setHeroDetail] = useState<string>('');
   const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
+  const [newHero, setNewHero] = useState<IHero | null>(null);
 
   const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setHeroName(e.target.value);
@@ -37,18 +43,57 @@ export const AddHeroPage = () => {
     setHeroDetail(e.target.value);
   };
 
-  const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmitForm = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const newHero = {
+    setNewHero({
+      id: store.allHeroes.length + 1,
       img: heroImgUrl,
       name: heroName,
       text: heroIntro,
       detailText: heroDetail
-    };
-    dispatch(addNewHero(newHero));
-    setLocalStorageData(localStorageStringName, store.allHeroes);
-    navigate('/');
+    });
   };
+
+  useEffect(() => {
+    firstStoreState = { ...store.allHeroes };
+  }, []);
+
+  useEffect(() => {
+    if (newHero !== null) {
+      console.log('ДИСП');
+      dispatch(addNewHero(newHero));
+    }
+  }, [newHero]);
+
+  useEffect(() => {
+    if (JSON.stringify(firstStoreState) !== JSON.stringify({ ...store.allHeroes })) {
+      setLocalStorageData(localStorageStringName, store.allHeroes);
+      navigate('/');
+    }
+    console.log('firstStoreState', firstStoreState);
+    console.log('store.allHeroes', store.allHeroes);
+  }, [store]);
+
+  // export const resetPassword = (hero: IHero): TAppThunk => {
+  //   return function (dispatch: Dispatch) {
+  //     fetch(apiUrl + 'password-reset/reset', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       },
+  //       body: JSON.stringify(data)
+  //     })
+  //       .then(checkResponse)
+  //       .then(data => {
+  //         console.log('resetPassword data', data);
+  //         dispatch(userResetPasswordSuccess());
+  //       })
+  //       .catch(error => {
+  //         dispatch(userResetPasswordFailed());
+  //         console.log('resetPassword error', error);
+  //       });
+  //   };
+  // };
 
   useEffect(() => {
     if (
