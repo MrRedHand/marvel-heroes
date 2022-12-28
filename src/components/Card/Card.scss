@@ -21,6 +21,9 @@
 
   &-avatar {
     height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
 
     @media (max-width: $maxWidth) {
       &::before {
@@ -40,7 +43,13 @@
     }
 
     img {
-      max-width: 100%;
+      max-inline-size: unset;
+      max-block-size: unset;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
 
       @media (max-width: $maxWidth) {
         position: absolute;

@@ -9,7 +9,7 @@ interface IButton {
   disabled?: boolean;
 }
 
-type TButtonTypes = 'add' | 'save' | 'cancel';
+type TButtonTypes = 'add' | 'save' | 'cancel' | 'link';
 
 export const Button: FC<IButton> = ({ value, styleType, onClick, type, disabled = false }) => {
   return (

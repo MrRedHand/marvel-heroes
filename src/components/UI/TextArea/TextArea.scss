@@ -3,8 +3,14 @@
   padding: 15px;
   border-radius: 6px;
   width: 100%;
+  transition: all ease-in 0.1s;
 
   &::placeholder {
     color: #3d3a54;
+  }
+
+  &:focus {
+    transform: scale(1.015);
+    background: #211e2f;
   }
 }

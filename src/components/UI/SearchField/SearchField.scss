@@ -7,6 +7,7 @@
   padding: 15px;
   border-radius: 6px;
   width: 900px;
+  transition: all ease-in 0.1s;
 
   @media (max-width: $maxWidth) {
     width: 100%;
@@ -15,5 +16,10 @@
 
   &::placeholder {
     color: #3d3a54;
+  }
+
+  &:focus {
+    transform: scale(1.015);
+    background: #0e0d17;
   }
 }

@@ -4,8 +4,17 @@ import { InputField } from '../../components/UI/InputField/InputField';
 import { TextArea } from '../../components/UI/TextArea/TextArea';
 import React, { useEffect, useState } from 'react';
 import { Button } from '../../components/UI/Button/Button';
+import { useDispatch, useSelector } from '../../store/hooks/redux-hooks';
+import { addNewHero } from '../../store/actions/action-creators';
+import { useNavigate } from 'react-router';
+import { setLocalStorageData } from '../../services/localStorage';
+import { localStorageStringName } from '../../services/constants';
 
 export const AddHeroPage = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const store = useSelector(state => state.main);
+
   const [heroName, setHeroName] = useState<string>('');
   const [heroImgUrl, setHeroImgUrl] = useState<string>('');
   const [heroIntro, setHeroIntro] = useState<string>('');
@@ -30,13 +39,15 @@ export const AddHeroPage = () => {
 
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    console.log({
-      heroName,
-      heroImgUrl,
-      heroIntro,
-      heroDetail
-    });
+    const newHero = {
+      img: heroImgUrl,
+      name: heroName,
+      text: heroIntro,
+      detailText: heroDetail
+    };
+    dispatch(addNewHero(newHero));
+    setLocalStorageData(localStorageStringName, store.allHeroes);
+    navigate('/');
   };
 
   useEffect(() => {
@@ -51,6 +62,10 @@ export const AddHeroPage = () => {
       setButtonDisabled(true);
     }
   }, [heroName, heroImgUrl, heroIntro, heroDetail]);
+
+  const cancelAddingHero = () => {
+    navigate('/');
+  };
 
   return (
     <>
@@ -73,6 +88,7 @@ export const AddHeroPage = () => {
           />
           <Button value='Add hero' styleType='save' type='submit' disabled={buttonDisabled} />
         </form>
+        <Button value='Cancel' styleType='link' onClick={cancelAddingHero} />
       </FormLayout>
     </>
   );

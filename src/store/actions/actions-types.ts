@@ -1,14 +1,19 @@
-import { ADD_NEW_HERO, ADD_STORED_HEROES } from './actions';
+import { ADD_NEW_HERO, ADD_STORED_HEROES, FILTER_HEROES } from './actions';
 import { IHero } from '../../utils/types';
 
 export interface IAddNewHero {
   readonly type: typeof ADD_NEW_HERO;
-  hero: IHero;
+  payload: IHero;
 }
 
 export interface IAddStoredHeroes {
   readonly type: typeof ADD_STORED_HEROES;
-  heroes: IHero[];
+  payload: IHero[];
 }
 
-export type TMainActions = IAddNewHero | IAddStoredHeroes;
+export interface IFilterHeroes {
+  readonly type: typeof FILTER_HEROES;
+  payload: string;
+}
+
+export type TMainActions = IAddNewHero | IAddStoredHeroes | IFilterHeroes;
