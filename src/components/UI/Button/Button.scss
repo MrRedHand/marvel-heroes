@@ -7,13 +7,14 @@
   border-radius: 12px;
   transition: all ease-in 0.12s;
   text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
 
   &.add {
     background-color: #efa94a;
     color: #561f1f;
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
+
 
     @media (max-width: $maxWidth) {
       margin-top:30px;
@@ -24,5 +25,27 @@
       background-color: #ffde53;
       box-shadow: 0 0 22px #efb448;
     }
+  }
+
+  &.save {
+    background-color: #70ce3c;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #7aef4b;
+      box-shadow: 0 0 22px #b7dc4c;
+    }
+
+    @media (max-width: $maxWidth) {
+      margin-top:10px;
+      width: 100%;
+    }
+  }
+
+  &:disabled {
+    pointer-events: none;
+    cursor: none;
+    background: #42405b;
+    color: #53516f;
   }
 }

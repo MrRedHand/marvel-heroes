@@ -2,7 +2,7 @@ import { MainTitle } from '../../components/UI/MainTitle/MainTitle';
 import { FormLayout } from '../../components/Layout/FormLayout/FormLayout';
 import { InputField } from '../../components/UI/InputField/InputField';
 import { TextArea } from '../../components/UI/TextArea/TextArea';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button } from '../../components/UI/Button/Button';
 
 export const AddHeroPage = () => {
@@ -10,6 +10,7 @@ export const AddHeroPage = () => {
   const [heroImgUrl, setHeroImgUrl] = useState<string>('');
   const [heroIntro, setHeroIntro] = useState<string>('');
   const [heroDetail, setHeroDetail] = useState<string>('');
+  const [buttonDisabled, setButtonDisabled] = useState<boolean>(true);
 
   const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
     setHeroName(e.target.value);
@@ -38,6 +39,19 @@ export const AddHeroPage = () => {
     });
   };
 
+  useEffect(() => {
+    if (
+      heroName.length > 0 &&
+      heroImgUrl.length > 0 &&
+      heroIntro.length > 0 &&
+      heroDetail.length > 0
+    ) {
+      setButtonDisabled(false);
+    } else {
+      setButtonDisabled(true);
+    }
+  }, [heroName, heroImgUrl, heroIntro, heroDetail]);
+
   return (
     <>
       <MainTitle>Let's add hero!</MainTitle>
@@ -57,7 +71,7 @@ export const AddHeroPage = () => {
             onChange={handleHeroDetailText}
             value={heroDetail}
           />
-          <Button value='Add hero' styleType='save' type='submit' />
+          <Button value='Add hero' styleType='save' type='submit' disabled={buttonDisabled} />
         </form>
       </FormLayout>
     </>
