@@ -4,15 +4,9 @@ import captainUrl from '../../images/capatain.png';
 import hulkUrl from '../../images/hulk.png';
 import thorUrl from '../../images/thor.png';
 import ironUrl from '../../images/ironman.png';
+import { IHero } from '../../utils/types';
 
-interface IinitialHeroes {
-  img: string;
-  name: string;
-  text: string;
-  detailText: string;
-}
-
-export const initialHeroes: IinitialHeroes[] = [
+export const initialHeroes: IHero[] = [
   {
     img: spiderUrl,
     name: 'Spider-Man',
