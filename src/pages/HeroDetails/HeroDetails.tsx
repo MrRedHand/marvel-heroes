@@ -13,7 +13,7 @@ export const HeroDetails: FC<IHeroDetails> = () => {
   const hero = store.allHeroes.find(hero => hero.id === Number(id));
 
   const goHome = () => {
-    navigate('/');
+    navigate('/marvel-heroes');
   };
   return (
     <>

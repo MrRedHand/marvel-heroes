@@ -67,7 +67,7 @@ export const AddHeroPage = () => {
   useEffect(() => {
     if (JSON.stringify(firstStoreState) !== JSON.stringify({ ...store.allHeroes })) {
       setLocalStorageData(localStorageStringName, store.allHeroes);
-      navigate('/');
+      navigate('/marvel-heroes');
     }
   }, [store]);
 
@@ -85,7 +85,7 @@ export const AddHeroPage = () => {
   }, [heroName, heroImgUrl, heroIntro, heroDetail]);
 
   const cancelAddingHero = () => {
-    navigate('/');
+    navigate('/marvel-heroes');
   };
 
   return (
