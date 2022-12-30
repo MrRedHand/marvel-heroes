@@ -23,9 +23,9 @@ function App() {
   return (
     <MainLayout>
       <Routes>
-        <Route path='/' element={<MainPage />} />
-        <Route path='/add-hero' element={<AddHeroPage />} />
-        <Route path='/:id' element={<HeroDetails />} />
+        <Route path='/marvel-heroes' element={<MainPage />} />
+        <Route path='/marvel-heroes/add-hero' element={<AddHeroPage />} />
+        <Route path='/marvel-heroes/:id' element={<HeroDetails />} />
       </Routes>
     </MainLayout>
   );
