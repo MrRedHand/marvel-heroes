@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "./static/css/main.7f8b1de6.css",
-    "main.js": "./static/js/main.225bbbbc.js",
-    "static/media/wolverine.png": "./static/media/wolverine.4912e16d89beb28871a9.png",
-    "static/media/capatain.png": "./static/media/capatain.3f09d6f25cd2cc75cb71.png",
-    "static/media/spider.png": "./static/media/spider.e96d29952da6aaeea899.png",
-    "static/media/hulk.png": "./static/media/hulk.4540920a722193009d98.png",
-    "static/media/ironman.png": "./static/media/ironman.a796935ac3e5a240494a.png",
-    "static/media/thor.png": "./static/media/thor.f8f46d05f64968340d1d.png",
-    "index.html": "./index.html",
-    "main.7f8b1de6.css.map": "./static/css/main.7f8b1de6.css.map",
-    "main.225bbbbc.js.map": "./static/js/main.225bbbbc.js.map"
+    "main.css": "/marvel-heroes/static/css/main.7f8b1de6.css",
+    "main.js": "/marvel-heroes/static/js/main.f93d5e85.js",
+    "static/media/wolverine.png": "/marvel-heroes/static/media/wolverine.4912e16d89beb28871a9.png",
+    "static/media/capatain.png": "/marvel-heroes/static/media/capatain.3f09d6f25cd2cc75cb71.png",
+    "static/media/spider.png": "/marvel-heroes/static/media/spider.e96d29952da6aaeea899.png",
+    "static/media/hulk.png": "/marvel-heroes/static/media/hulk.4540920a722193009d98.png",
+    "static/media/ironman.png": "/marvel-heroes/static/media/ironman.a796935ac3e5a240494a.png",
+    "static/media/thor.png": "/marvel-heroes/static/media/thor.f8f46d05f64968340d1d.png",
+    "index.html": "/marvel-heroes/index.html",
+    "main.7f8b1de6.css.map": "/marvel-heroes/static/css/main.7f8b1de6.css.map",
+    "main.f93d5e85.js.map": "/marvel-heroes/static/js/main.f93d5e85.js.map"
   },
   "entrypoints": [
     "static/css/main.7f8b1de6.css",
-    "static/js/main.225bbbbc.js"
+    "static/js/main.f93d5e85.js"
   ]
 }
